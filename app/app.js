@@ -13,6 +13,7 @@ app.use(express.static('app/public'));
 app.use(require('./routes/index'));
 app.use(require('./routes/equiplist'));
 app.use(require('./routes/addEquip'));
+app.use(require('./routes/editEquip'));
 
 
 var server = app.listen(app.get('port'), function () {

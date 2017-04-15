@@ -1,14 +1,35 @@
 <!--jQuery Datatable-->
 <% if( pageID = 'equiplist' ) { %>
 <script>
+
+    $(document).ready(function () {
+        $('.delete').click(function () {
+            var id = $(this).attr('id');
+            var name = $(this).attr('name');
+            $('#name').html(name);
+            $('.cdelete').attr("href", "/editEquip/delete/" + id);
+        });
+
+        $('.cdelete').click(function () {
+            setTimeout(location.reload(), 1000);
+        });
+    });
+
+
+    //    $(document).ready(function () {
+    //        $('.cdelete').click(function () {
+    //            setTimeout(location.reload(), 1000);
+    //        });
+    //    });
     $('#list').DataTable({
         dom: 'lBfrtip', // elements, in order
         buttons: [  // exports buttons
             'copy', 'csv', 'excel', 'pdf', 'print'
         ],
         lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
-        pageLength: 25
+        pageLength: 10
     });
+
 </script>
 <% } %>
 
