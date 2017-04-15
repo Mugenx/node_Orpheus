@@ -14,13 +14,3 @@
     </tr>
     <% }); %>
 </table>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#list').DataTable({
-            "order": [[4, "asc"]],
-            // "pageLength": 25 // define entities per page
-            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
-        });
-    });
-</script>

@@ -12,8 +12,7 @@ router.get('/', function (req, res) {
             pageTitle: "Home",
             pageID: 'home',
             results: results
-        })
-        ;
+        });
     });
 
 
