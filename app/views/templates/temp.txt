@@ -1,0 +1,26 @@
+<table id="list" class="table table-hover table-responsive">
+    <thead>
+    <tr>
+        <th>User Name</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <% for(var i = 0; i < results.length; i++) { %>
+    <tr>
+        <td><%= results[i].username %></td>
+        <td><%= results[i].firstname %></td>
+        <td><%= results[i].lastname %></td>
+    </tr>
+    <% } %>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#list').DataTable({
+            "order": [[4, "asc"]],
+            // "pageLength": 25 // define entities per page
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+        });
+    });
+</script>

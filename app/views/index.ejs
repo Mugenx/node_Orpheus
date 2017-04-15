@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include templates/head.ejs %>
+</head>
+<body id="<%= pageID %>">
+
+<% include templates/header.ejs %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <% include content/index.ejs %>
+
+        </div><!-- primary -->
+    </div><!-- row -->
+</div><!-- container -->
+
+<% include templates/jsdefault.ejs %>
+
+<footer class="footer navbar-fixed-bottom" style=" margin-top: 100px">
+    <p align="center" style="margin: 50px 0; color: #003366;">&copy;
+        <script>document.write(new Date().getFullYear())</script>
+        Algonquin College . All Rights Reserved.
+    </p>
+</footer>
+
+</body>
+</html>
