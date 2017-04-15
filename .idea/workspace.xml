@@ -450,7 +450,7 @@
       <updated>1492200778284</updated>
       <workItem from="1492200779452" duration="23320000" />
       <workItem from="1492230186735" duration="259000" />
-      <workItem from="1492230458113" duration="5196000" />
+      <workItem from="1492230458113" duration="5205000" />
     </task>
     <task id="LOCAL-00001" summary="move database.js into folder">
       <created>1492227031404</created>
@@ -466,11 +466,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492235173421</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Equipment list page finish">
+      <created>1492235972873</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1492235972873</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28775000" />
+    <option name="totallyTimeSpent" value="28784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1223" y="0" width="1337" height="1440" extended-state="6" />
