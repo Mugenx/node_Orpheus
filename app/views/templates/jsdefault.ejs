@@ -1,43 +1,35 @@
-<!--jQuery Datatable-->
-<% if( pageID = 'equiplist' ) { %>
-<script>
-
-    $(document).ready(function () {
-        $('.delete').click(function () {
-            var id = $(this).attr('id');
-            var name = $(this).attr('name');
-            $('#name').html(name);
-            $('.cdelete').attr("href", "/editEquip/delete/" + id);
-        });
-
-        $('.cdelete').click(function () {
-            setTimeout(location.reload(), 1000);
-        });
-    });
-
-
-    //    $(document).ready(function () {
-    //        $('.cdelete').click(function () {
-    //            setTimeout(location.reload(), 1000);
-    //        });
-    //    });
-    $('#list').DataTable({
-        dom: 'lBfrtip', // elements, in order
-        buttons: [  // exports buttons
-            'copy', 'csv', 'excel', 'pdf', 'print'
-        ],
-        lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
-        pageLength: 10
-    });
-
-</script>
-<% } %>
-
-<!--jQuery-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
 <!--reload-->
 <script src="/reload/reload.js"></script>
 
 <!-- toTop button -->
 <script src="/js/toTop.js"></script>
+
+<!--jQuery Datatable-->
+<% if( pageID = 'equiplist' ) { %>
+<script>
+
+    $(document).ready(function () {
+
+
+        $('.delete').click(function () {
+            var id = $(this).attr('id');
+            var name = $(this).attr('name');
+            $('#name').html(name);
+            $('.cdelete').attr("href", "/equiplist/delete/" + id);
+        });
+    });
+
+
+    $(document).ready(function () {
+        $('#list').DataTable( {
+            dom: 'lBfrtip', // elements, in order
+            buttons: [  // exports buttons
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ],
+//            "pageLength": 25, // define entities per page
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+        } );
+    });
+
+</script>
+<% } %>
